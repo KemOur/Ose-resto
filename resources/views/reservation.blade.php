@@ -48,7 +48,6 @@
     @endif
 
 
-
     <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <div class="row justify-content-center">
             <div class="col-sm-8">
@@ -58,22 +57,22 @@
                         <form method="post" action="/reservation">
                             @csrf
                             <label  for="api_token" style="display: none;">api token</label>
-                            <input type="hidden" name="api_token" value="{{md5(uniqid(true))}}" required="">
+                            <input type="hidden" name="api_token" value="{{md5(uniqid(true))}}" >
 
                             <label for="date" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="date" name="date" value="{{ old('date')}}"min="2021-02-21" required="">
+                            <input type="date" class="form-control" id="date" name="date" value="{{ old('date')}}" min="2021-02-21">
 
                             <div class="my-3">
                                 <label for="heure" class="form-label">Heure</label>
-                                <input type="time" id="heure" class="form-control" name="heure" min="09:00" max="18:00" step="3600" value="{{ old('heure')}}" required="">
+                                <input type="time" id="heure" class="form-control" name="heure" min="09:00" max="18:00" step="3600" value="{{ old('heure')}}">
                             </div>
                             <div class="my-3">
                                 <label for="emails" class="form-label">Votre adresse e-mail</label>
-                                <input type="email" class="form-control" id="emails" name="emails" placeholder="osé@gmail.com" value="{{ old('emails')}}" required="">
+                                <input type="email" class="form-control" id="emails" name="emails" placeholder="osé@gmail.com" value="{{ old('emails')}}">
                             </div>
 
                             <div class="form-check mt-4">
-                                <input class="form-check-input" type="checkbox" id="cgu" name="cgu" required="">
+                                <input class="form-check-input" type="checkbox" id="cgu" name="cgu">
                                 <label class="form-check-label" for="cgu">
                                     J'ai lu et accepté les <a href="#">conditions d'utilisation</a>
                                 </label>
@@ -89,6 +88,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
 </div>
 @include('partials.footer')
 

@@ -20,10 +20,7 @@ Route::get('infos', 'App\Http\Controllers\ApiController@infos');
 Route::post('/reservation','App\Http\Controllers\ApiController@store');
 
 
-
-Route::post('/reservation/annulation/{token}', function(){
-    return 'annuler';
-});
+Route::post('/reservation/annulation/{token}');
 
 
 

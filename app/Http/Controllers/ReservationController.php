@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
+use App\Http\Requests\RequestName;
 use App\Http\Requests\ReservationRequest;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -36,6 +38,5 @@ class ReservationController extends Controller
         //return directement des messages, bien enregistré ou le truc est fermé ce jour la!
         return redirect('/')
             ->with('status','Nous vous confirmons votre réservation 🤗!');
-
     }
 }

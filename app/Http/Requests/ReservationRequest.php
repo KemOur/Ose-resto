@@ -15,7 +15,6 @@ class ReservationRequest extends FormRequest
     {
         return true;
     }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -28,6 +27,15 @@ class ReservationRequest extends FormRequest
             'heure' => "required",
             'emails' => "required|email",
             'api_token' => "required",
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'date.required' => "La date est obligatoire !",
+            'heure.required' => "L'heure est obligatoire !",
+            'emails.required' => "L'email est obligatoire !",
         ];
     }
 }

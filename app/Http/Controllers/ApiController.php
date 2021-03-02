@@ -35,7 +35,7 @@ class ApiController extends Controller
         ]);
 
         Mail::to(Config::get('reservation.email'))->send(new Reservation($params));
-        return response()->json('reservation confirmé !');
+        return response()->json('reservation confirmé depuis l api!');
     }
 
 
