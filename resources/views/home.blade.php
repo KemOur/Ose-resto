@@ -1,5 +1,4 @@
 @include('partials.header')
-@extends('layouts.default')
 
 @if (session('status'))
     <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-500">
