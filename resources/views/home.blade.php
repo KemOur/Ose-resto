@@ -95,10 +95,44 @@
     </div>
 
     <h2 class="my-5">Informations pratiques</h2>
+    <br>
+    <br>
 
-    <div id="map" style="height: 350px; width: 100%;"></div>
-    <br>
-    <br>
+    <style type="text/css">
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+    </style>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            const paris = { lat:48.874157982449816, lng:2.3583602463035205};
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 17,
+                center: paris,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: paris,
+                map: map,
+            });
+        }
+    </script>
+    </head>
+    </body>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcc7cx3frxUsJ-nokSOeHU046xGbS9Bwg&callback=initMap&libraries=&v=weekly"
+        async
+    ></script>
 </div>
-
 @include('partials.footer')
