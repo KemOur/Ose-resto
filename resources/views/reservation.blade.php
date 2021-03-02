@@ -61,15 +61,15 @@
                             <input type="hidden" name="api_token" value="{{md5(uniqid(true))}}" required="">
 
                             <label for="date" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="date" name="date" value="" min="2021-02-21" required="">
+                            <input type="date" class="form-control" id="date" name="date" value="{{ old('date')}}"min="2021-02-21" required="">
 
                             <div class="my-3">
                                 <label for="heure" class="form-label">Heure</label>
-                                <input type="time" id="heure" class="form-control" name="heure" min="09:00" max="18:00" step="3600" required="">
+                                <input type="time" id="heure" class="form-control" name="heure" min="09:00" max="18:00" step="3600" value="{{ old('heure')}}" required="">
                             </div>
                             <div class="my-3">
                                 <label for="emails" class="form-label">Votre adresse e-mail</label>
-                                <input type="email" class="form-control" id="emails" name="emails" placeholder="osé@gmail.com" value="" required="">
+                                <input type="email" class="form-control" id="emails" name="emails" placeholder="osé@gmail.com" value="{{ old('emails')}}" required="">
                             </div>
 
                             <div class="form-check mt-4">

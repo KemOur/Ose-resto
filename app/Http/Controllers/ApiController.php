@@ -1,21 +1,23 @@
 <?php
+
 namespace App\Http\Controllers;
-use App\Http\Requests\ReservationRequest;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
+use App\Http\Requests\ReservationRequest;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Reservation;
-use Illuminate\Support\Facades\Config;
-class ReservationController extends Controller
+
+class ApiController extends Controller
 {
     //
-    public function show()
+    public function infos()
     {
-        return view('reservation');
+        return Config::get('reservation');
     }
 
-
-    public function send(ReservationRequest $request)
+    public function store(Request $request)
     {
         $params = [
             'date' => $request->get('date'),
@@ -33,9 +35,8 @@ class ReservationController extends Controller
         ]);
 
         Mail::to(Config::get('reservation.email'))->send(new Reservation($params));
-        //return directement des messages, bien enregistré ou le truc est fermé ce jour la!
-        return redirect('/')
-            ->with('status','Nous vous confirmons votre réservation 🤗!');
-
+        return response()->json('reservation confirmé !');
     }
+
+
 }
