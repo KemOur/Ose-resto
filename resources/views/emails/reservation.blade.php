@@ -14,11 +14,10 @@
 
 <p>
     Cher(e) client(e) nous vous confirmant votre réservation le {{ $date }} à {{ $heure}}
-    en cas d’empêchement majeur veuillez <a href="https://ose-resto.herokuapp.com/reservation/annulation">Annuler</a>
-    votre réservation dans les plus brefs délais!
-    merci à bientôt.
+    en cas d’empêchement majeur veuillez <a href="http://127.0.0.1:8000/reservation/annulation/{{$api_token}}">ANNULER LA RÉSERVATION</a>
+    dans les plus brefs délais!
+    merci, à bientôt 😄.
 </p>
 
 </body>
-
 </html>

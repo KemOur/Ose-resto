@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="112dbe9b-93b8-40f0-a6c5-57a4a36162e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ReservationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ReservationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reservation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnnulationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnnulationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/annulation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/annulation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/annulation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/annulation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/reservation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +183,10 @@
       <updated>1614626553989</updated>
       <workItem from="1614626562210" duration="2996000" />
       <workItem from="1614630502395" duration="7384000" />
-      <workItem from="1614672313303" duration="13962000" />
+      <workItem from="1614672313303" duration="14896000" />
+      <workItem from="1614860705336" duration="1061000" />
+      <workItem from="1615196635460" duration="1735000" />
+      <workItem from="1615199316621" duration="9711000" />
     </task>
     <servers />
   </component>
@@ -197,10 +198,11 @@
       <screen x="0" y="25" width="1440" height="801" />
     </state>
     <state x="763" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.801@0.25.1440.801" timestamp="1614672595703" />
-    <state x="458" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614696552347">
+    <state x="458" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615206556560">
       <screen x="0" y="25" width="1440" height="809" />
     </state>
-    <state x="458" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.809@0.25.1440.809" timestamp="1614696552347" />
+    <state x="458" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.807@0.25.1440.807" timestamp="1615203155000" />
+    <state x="458" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.809@0.25.1440.809" timestamp="1615206556560" />
     <state width="1398" height="391" key="GridCell.Tab.0.bottom" timestamp="1614626840354">
       <screen x="0" y="25" width="1440" height="815" />
     </state>
@@ -217,13 +219,20 @@
       <screen x="0" y="25" width="1440" height="815" />
     </state>
     <state width="1398" height="391" key="GridCell.Tab.0.right/0.25.1440.815@0.25.1440.815" timestamp="1614626840353" />
-    <state x="458" y="253" key="NewPhpClassDialog" timestamp="1614637084816">
-      <screen x="0" y="25" width="1440" height="818" />
+    <state x="458" y="250" key="NewPhpClassDialog" timestamp="1615202957146">
+      <screen x="0" y="25" width="1440" height="807" />
     </state>
+    <state x="458" y="250" key="NewPhpClassDialog/0.25.1440.807@0.25.1440.807" timestamp="1615202957146" />
     <state x="458" y="253" key="NewPhpClassDialog/0.25.1440.818@0.25.1440.818" timestamp="1614637084816" />
-    <state x="399" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1614672313378">
-      <screen x="0" y="25" width="1440" height="799" />
+    <state x="399" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1615196668320">
+      <screen x="0" y="25" width="1440" height="807" />
     </state>
     <state x="399" y="253" key="com.intellij.ide.util.TipDialog/0.25.1440.799@0.25.1440.799" timestamp="1614672313378" />
+    <state x="399" y="254" key="com.intellij.ide.util.TipDialog/0.25.1440.807@0.25.1440.807" timestamp="1615196668320" />
+    <state x="399" y="255" key="com.intellij.ide.util.TipDialog/0.25.1440.809@0.25.1440.809" timestamp="1614861321731" />
+    <state x="624" y="152" width="816" height="550" key="find.popup" timestamp="1615203550054">
+      <screen x="0" y="25" width="1440" height="809" />
+    </state>
+    <state x="624" y="152" width="816" height="550" key="find.popup/0.25.1440.809@0.25.1440.809" timestamp="1615203550054" />
   </component>
 </project>

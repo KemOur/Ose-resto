@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('home');
 Route::get('/reservation', [\App\Http\Controllers\ReservationController::class, 'show'])->name('reservation.form');
 Route::post('/reservation', [\App\Http\Controllers\ReservationController::class, 'send'])->name('reservation.send');
-Route::get('/reservation/annulation', [\App\Http\Controllers\AnnulationController::class, 'annulation'])->name('annulation');
 
-Route::post('/reservation/annulation/{token}', [App\Http\Controllers\AnnulationController::class, 'AnullReserv'])->name('annulation.AnnullReserve');
+Route::get('/reservation/annulation/{token}', [\App\Http\Controllers\AnnulationController::class, 'annulation'])->name('annulation');
+Route::post('/reservation/annulation/{token}', [\App\Http\Controllers\AnnulationController::class, 'annulReservation'])->name('annulation.reservation');

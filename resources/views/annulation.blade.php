@@ -1,5 +1,25 @@
 @include('partials.header')
 
+
+@if (session('status'))
+    <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-500">
+            <span class="inline-block align-middle">
+                {{ session('status') }}
+            </span>
+    </div>
+@endif
+
+@if ($errors->any())
+    <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-pink-500">
+            <span class="inline-block align-middle">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </span>
+    </div>
+@endif
 <div class="max-w-7xl mx-auto">
     <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
 
@@ -28,6 +48,8 @@
 </div>
 
 <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+    <form method="POST">
+        @csrf
     <div class="row justify-content-center">
         <div class="container mt-5">
             <div class="row justify-content-center">
@@ -35,12 +57,12 @@
                     <br>
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="card-title text-center mb-4">Réservation confirmée ✌  🤗 </h1>
+                            <h1 class="card-title text-center mb-4">Annuler ma réservation 🤗 </h1>
 
-                            <p class="card-text text-center">Vous pouvez à tout moment annuler votre venue en utilisant le lien présent dans l'email que nous venons de vous envoyer.</p>
+                            <p class="card-text text-center"> je souhaite annuler ma réservation !</p>
 
                             <div class="d-grid gap-2 mt-4">
-                                <a href="/" class="btn btn-outline-danger" type="button">Annuler la réservation</a>
+                                <button class="btn btn-outline-danger" type="submit">Annuler la réservation</button>
                                 <a href="/" class="btn btn-light" type="button">Retour</a>
                             </div>
                         </div>
@@ -49,6 +71,7 @@
             </div>
         </div>
     </div>
+    </form>
 </div>
 
 @include('partials.footer')
