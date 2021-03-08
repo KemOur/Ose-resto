@@ -63,7 +63,7 @@
 
                             <div class="d-grid gap-2 mt-4">
                                 <button class="btn btn-outline-danger" type="submit">Annuler la réservation</button>
-                                <a href="/" class="btn btn-light" type="button">Retour</a>
+                                <a href="http://ose-resto.herokuapp.com" class="btn btn-light" type="button">Retour</a>
                             </div>
                         </div>
                     </div>
